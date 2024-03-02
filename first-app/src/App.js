@@ -1,13 +1,11 @@
+import { createElement } from "react";
 import "./App.css";
 
-export const App = () => {
-	// императивный стиль
-	const currentYear = new Date().getFullYear();
+const thisYear = (year) => {
+	return createElement("h2", null, year);
+};
 
-	return (
-		<>
-			{/* императивный стиль */}
-			<h2>{currentYear}</h2>
-		</>
-	);
+export const App = () => {
+	const currentYear = new Date().getFullYear();
+	return thisYear(currentYear);
 };
